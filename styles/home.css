@@ -1,0 +1,116 @@
+.home-blok {
+  background-color: #475265;
+  height: calc(100vh - 80px);
+  color: #ffffff;
+}
+.home-blok-1 {
+  width: 45%;
+  height: 100%;
+  padding: 6% 2% 2% 6%;
+}
+.home-blok-1-naslov {
+  font-size: 68px;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+  padding: 4% 0;
+}
+.home-blok-1-naslov-linija {
+  width: 130px;
+  height: 8px;
+  background-color: #00AEEF;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+.home-blok-1-text {
+  font-size: 28px;
+  padding: 4% 20% 4% 0;
+}
+.home-blok-1-mreza {
+  cursor: pointer;
+}
+.home-blok2 {
+  height: 300px;
+  background-color: #F8F8FA;
+}
+.home-blok2-text {
+  font-size: 28px;
+  text-align: center;
+  color: #4d4d4d;
+  padding: 3% 19% 2%;
+}
+.home-blok3 {
+  height: auto;
+  background-color: #ffffff;
+  position: relative;
+}
+.home-blok3-naslov {
+  padding: 4% 6%;
+  position: absolute;
+}
+.home-blok3-naslov-tit {
+  font-size: 64px;
+  letter-spacing: -0.03em;
+  color: #eaeaea;
+}
+.home-blok3-naslov-text {
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  color: #4d4d4d;
+}
+.home-blok3-naslov-linija {
+  width: 180px;
+  height: 8px;
+  background-color: #00AEEF;
+  margin-top: 30px;
+}
+.home-blok3-prazan {
+  height: 200px;
+}
+.home-blok3 .grid {
+  display: grid;
+  grid-gap: -1px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+}
+.home-blok3 .grid-projekat {
+  grid-column: 1;
+  grid-row: 3;
+}
+.home-blok3 .grid-projekat:nth-child(1) {
+  grid-column: 1;
+  grid-row: 2 / 6;
+}
+.home-blok3 .grid-projekat:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / 5;
+}
+.home-blok3 .grid-projekat:nth-child(3) {
+  grid-column: 1;
+  grid-row: 6 / 10;
+}
+.home-blok3 .grid-projekat:nth-child(4) {
+  grid-column: 2;
+  grid-row: 5 / 9;
+}
+.home-blok3 .grid-projekat img {
+  width: 100%;
+}
+.home-blok3 .grid-projekat-opis {
+  padding: 5% 4%;
+}
+.home-blok3 .grid-projekat-opis-title {
+  font-size: 36px;
+  line-height: 24px;
+  color: #3d3d3d;
+  padding-bottom: 2%;
+}
+.home-blok3 .grid-projekat-opis-text {
+  width: 30%;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a3a3a3;
+}
+.home-blok4 {
+  height: 200px;
+  width: 100%;
+}
