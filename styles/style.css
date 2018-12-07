@@ -109,7 +109,7 @@ p {
 }
 .home-blok3 .grid {
   display: grid;
-  grid-gap: -1px;
+  grid-gap: 0;
   grid-template-columns: 50% 50%;
   grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px;
 }
@@ -150,6 +150,39 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #a3a3a3;
+}
+.home-blok3 .grid-projekat-picture {
+  position: relative;
+}
+.home-blok3 .grid-projekat-picture:hover {
+  opacity: 1;
+}
+.home-blok3 .grid-projekat-picture-hover {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(0, 174, 239, 0.8);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.home-blok3 .grid-projekat-picture-hover:hover {
+  opacity: 1;
+}
+.home-blok3 .grid-projekat-picture-hover-logo {
+  max-width: 200px;
+  max-height: 50px;
+}
+.home-blok3 .grid-projekat-picture-hover-icon {
+  max-width: 200px;
+  max-height: 100px;
 }
 .home-blok4 {
   height: 200px;

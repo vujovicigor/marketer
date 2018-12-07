@@ -31,7 +31,19 @@
         {% for item in Projects %}
             {% if loop.index < 5 %}
             <div class="grid-projekat">
-                <img src="img/{{item.Image}}">
+                <div class="grid-projekat-picture">
+                    <img src="img/{{item.Image}}">
+                    <div class="grid-projekat-picture-hover">
+                        <img class="grid-projekat-picture-hover-logo" src="img/{{item.Logo}}">
+                        <div>{{item.Text}}</div>
+                        <button>VIŠE</button>
+                        <div class="d-flex"> 
+                            <img class="grid-projekat-picture-hover-icon" src="images/google-icon.svg"> 
+                            <img class="grid-projekat-picture-hover-icon" src="images/facebook-icon.svg"> 
+                            <img class="grid-projekat-picture-hover-icon" src="images/instagram-icon.svg"> 
+                        </div>
+                    </div>
+                </div>
                 <div class="grid-projekat-opis">
                     <div class="grid-projekat-opis-title">{{item.Title}} </div>
                     <div class="grid-projekat-opis-text">{{item.Text}}</div>
