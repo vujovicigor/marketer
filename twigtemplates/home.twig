@@ -72,4 +72,22 @@
         {% endfor %}
         </div>
     </div>
+    <div class="home-blok6">
+        <div class="home-blok6-prvi d-flex">
+        {% for item in Projects %}
+            {% if loop.index < 2 %}
+            <img class="home-blok6-prvi-slika" src="img/{{item.Image}}">
+            {% endif %}
+        {% endfor %}
+            <div class="home-blok6-prvi-text d-flex flex-column justify-content-between">
+                <div class="home-blok6-prvi-text-naslov">Images revealed of David Chipperfield Architects "city palace" apartments in Munich</div>
+                <div class="home-blok6-prvi-text-opis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                <div class="d-flex">
+                    <button class="button-black"> VIŠE</button>
+                    <button class="button-black"><img style="padding-right: 10px;" src="images/white-plus-icon.svg"> PROSLEDI</button>
+                </div>
+            </div>
+        </div>
+        <div class="home-blok6-drugi"></div>
+    </div>
 {% endblock %}

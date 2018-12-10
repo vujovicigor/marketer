@@ -53,6 +53,16 @@ button:focus {
   margin-bottom: 90px;
   cursor: pointer;
 }
+.button-black {
+  border: 1px solid #00AEEF;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-size: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 30px;
+  margin-right: 20px;
+}
 .home-blok {
   background-color: #475265;
   height: calc(100vh - 80px);
@@ -259,4 +269,33 @@ button:focus {
   text-align: center;
   width: 65%;
   margin: auto;
+}
+.home-blok6 {
+  min-height: 1400px;
+  background-color: #1c1c1c;
+}
+.home-blok6-prvi {
+  height: 700px;
+  padding: 50px 30px;
+}
+.home-blok6-prvi-slika {
+  max-width: 1084px;
+  max-height: 600px;
+}
+.home-blok6-prvi-text {
+  padding: 60px;
+}
+.home-blok6-prvi-text-naslov {
+  width: 81%;
+  font-size: 32px;
+  color: #ffffff;
+}
+.home-blok6-prvi-text-opis {
+  width: 81%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6D6D6D;
+}
+.home-blok6-drugi {
+  height: 700px;
 }
