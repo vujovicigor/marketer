@@ -5,6 +5,9 @@
 p {
   margin-bottom: 0;
 }
+button:focus {
+  outline: none !important;
+}
 .header {
   height: 80px;
   background-color: #1c1c1c;
@@ -226,4 +229,34 @@ p {
   color: #4d4d4d;
   letter-spacing: -0.03em;
   text-align: center;
+}
+.home-blok5-slajder {
+  width: 90%;
+  padding-top: 12%;
+}
+.home-blok5-slajder-logo {
+  width: 200px;
+  margin: auto;
+}
+.home-blok5-slajder-naziv {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.home-blok5-slajder-title {
+  font-size: 14px;
+  text-align: center;
+  color: #505050;
+  margin-bottom: 40px;
+}
+.home-blok5-slajder-poruka {
+  font-size: 14px;
+  line-height: 24px;
+  color: #DBDBDB;
+  padding-bottom: 70px;
+  text-align: center;
+  width: 65%;
+  margin: auto;
 }
