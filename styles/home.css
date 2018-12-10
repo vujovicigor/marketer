@@ -118,6 +118,8 @@
 }
 .home-blok3 .grid-projekat-picture-hover {
   opacity: 0;
+  padding-top: 250px;
+  text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -136,14 +138,40 @@
   opacity: 1;
 }
 .home-blok3 .grid-projekat-picture-hover-logo {
-  max-width: 200px;
-  max-height: 50px;
+  max-width: 350px;
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+.home-blok3 .grid-projekat-picture-hover-opis {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
 }
 .home-blok3 .grid-projekat-picture-hover-icon {
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 80px;
+  max-height: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .home-blok4 {
   height: 200px;
   width: 100%;
+}
+.home-blok5 {
+  min-height: 900px;
+  width: 100%;
+  background-color: #212224;
+  padding: 4% 24%;
+}
+.home-blok5-naslov {
+  font-size: 64px;
+  letter-spacing: -0.03em;
+  color: #eaeaea;
+  text-align: center;
+}
+.home-blok5-text {
+  font-size: 32px;
+  color: #4d4d4d;
+  letter-spacing: -0.03em;
+  text-align: center;
 }

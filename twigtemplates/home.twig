@@ -35,11 +35,11 @@
                     <img src="img/{{item.Image}}">
                     <div class="grid-projekat-picture-hover">
                         <img class="grid-projekat-picture-hover-logo" src="img/{{item.Logo}}">
-                        <div>{{item.Text}}</div>
-                        <button>VIŠE</button>
-                        <div class="d-flex"> 
+                        <div class="grid-projekat-picture-hover-opis">{{item.Text}}</div>
+                        <button class="button-white">VIŠE</button>
+                        <div class="d-flex justify-content-center align-items-center"> 
                             <img class="grid-projekat-picture-hover-icon" src="images/google-icon.svg"> 
-                            <img class="grid-projekat-picture-hover-icon" src="images/facebook-icon.svg"> 
+                            <img style="padding-bottom: 4px;" class="grid-projekat-picture-hover-icon" src="images/facebook-icon.svg"> 
                             <img class="grid-projekat-picture-hover-icon" src="images/instagram-icon.svg"> 
                         </div>
                     </div>
@@ -55,5 +55,18 @@
     </div>
     <div class="d-flex justify-content-center home-blok4">
         <button style="margin: 0;" class="button-blue">VIŠE</button>
+    </div>
+    <div class="home-blok5 d-flex flex-column align-items-center">
+        <div class="home-blok5-naslov">Testimonial</div>
+        <div class="home-blok5-text">Naši verni prijatelji</div>
+        <div class="home-blok3-naslov-linija"></div>
+        <div class="owl-carousel owl-theme">
+        {% for item in Projects %}
+            <div class="projects-pic"><img src="img/{{item.Image}}"></div>
+            {# <div class="projects-pic"><img src="images/slika2.jpg"></div>
+            <div class="projects-pic"><img src="images/slika3.jpg"></div>
+            <div class="projects-pic"><img src="images/slika4.jpg"></div> #}
+        {% endfor %}
+        </div>
     </div>
 {% endblock %}

@@ -122,6 +122,8 @@
                     }
                         &-hover{
                         opacity: 0;
+                        padding-top: 250px;
+                        text-align: center;
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -139,12 +141,20 @@
                             opacity: 1;
                         }
                         &-logo{
-                            max-width: 200px;
-                            max-height: 50px;
+                            max-width: 350px;
+                            max-height: 100px;
+                            margin-bottom: 20px;
+                        }
+                        &-opis{
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: @color-white;
                         }
                         &-icon{
-                            max-width: 200px;
-                            max-height: 100px;
+                            max-width: 80px;
+                            max-height: 80px;
+                            margin-left: 20px;
+                            margin-right: 20px;
                         }
                     }
                 }
@@ -154,5 +164,23 @@
     &-blok4{
         height: 200px;
         width: 100%;
+    }
+    &-blok5{
+        min-height: 900px;
+        width: 100%;
+        background-color: @background-dark-light;
+        padding: 4% 24%;
+        &-naslov{
+            font-size: 64px;
+            letter-spacing: -0.03em;
+            color: @color-gray-light;
+            text-align: center;
+        }
+        &-text{
+            font-size: 32px;
+            color: @color-gray-darker;
+            letter-spacing: -0.03em;
+            text-align: center;
+        }
     }
 }
