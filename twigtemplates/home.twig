@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center home-blok4">
-        <button style="margin: 0;" class="button-blue">VIŠE</button>
+        <button style="margin: 0;" class="button-blue2">VIŠE</button>
     </div>
     <div class="home-blok5 d-flex flex-column align-items-center">
         <div class="home-blok5-naslov">Testimonial</div>
@@ -93,12 +93,57 @@
         {% for item in Projects %}
             {% if loop.index > 1 and loop.index < 6 %}
             <div class="home-blok6-drugi-pic">
-                <img  src="img/{{item.Image}}">
-                <div class="home-blok6-drugi-opis" ></div>
+                <img class="home-blok6-drugi-pic-img"  src="img/{{item.Image}}">
+                <div class="home-blok6-drugi-opis" >
+                    <div class="home-blok6-drugi-opis-text">Images revealed of David Chipperfield Architects "city palace" apartments...</div>
+                    <div class="d-flex">
+                        <button class="button-black"> VIŠE</button>
+                        <button class="button-black"><img style="padding-right: 10px; width: 23px;" src="images/white-plus-icon.svg"> PROSLEDI</button>
+                    </div>
+                </div>
             </div>
             {% endif %}
         {% endfor %}
         </div>
-        
+        <div class="d-flex justify-content-center home-blok4">
+            <button style="margin: 0;" class="button-blue2">VIŠE</button>
+        </div>
+    </div>
+    <div class="home-blok7 d-flex flex-column justify-content-center">
+        <div class="home-blok7-gray d-flex justify-content-between">
+            <div>Naše usluge</div>
+            <div>Naše usluge</div>
+        </div>
+        <div class="home-blok7-black d-flex justify-content-between">
+            <div class="d-flex"><img style="margin-right: 10px; width: 15px;" src="images/black-plus-icon.svg">Google oglašavanje</div>
+            <div class="d-flex">Facebook oglašavanje<img style="margin-left: 10px; width: 15px;" src="images/black-plus-icon.svg"></div>
+        </div>
+    </div>
+    <div class="home-blok8 d-flex flex-column">
+        <div class="d-flex flex-column">
+            <div class="home-blok8-black">Kontakt</div>
+            <div class="home-blok8-gray">Vaša email adresa neće biti objavljena. Obavezna polja su označena *</div>
+        </div>
+        <form>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Ime i prezime *</label>
+                    <input type="text"></input>
+                </div>
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Email *</label>
+                    <input type="text"></input>
+                </div>
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Web</label>
+                    <input type="text"></input>
+                </div>
+            </div>
+            <div class="d-flex flex-column home-blok8-polje2">
+                <label class="home-blok8-text">Poruka *</label>
+                <input type="text"></input>
+            </div>
+        </form>
+        <div class="d-flex home-blok8-text"><img style="margin-right: 10px; width: 15px;" src="images/black-plus-icon.svg">Pošalji</div>
     </div>
 {% endblock %}
