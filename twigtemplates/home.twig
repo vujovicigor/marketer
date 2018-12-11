@@ -1,6 +1,7 @@
 {% extends "base.twig" %}
 {% block content %}
 {% set Projects = fetch("Projects") %}
+{% set PRIJATELJI = fetch("PRIJATELJI") %}
 
     <div class="home-blok">
         <div class="home-blok-1">
@@ -31,7 +32,19 @@
         {% for item in Projects %}
             {% if loop.index < 5 %}
             <div class="grid-projekat">
-                <img src="img/{{item.Image}}">
+                <div class="grid-projekat-picture">
+                    <img src="img/{{item.Image}}">
+                    <div class="grid-projekat-picture-hover">
+                        <img class="grid-projekat-picture-hover-logo" src="img/{{item.Logo}}">
+                        <div class="grid-projekat-picture-hover-opis">{{item.Text}}</div>
+                        <button class="button-white">VIŠE</button>
+                        <div class="d-flex justify-content-center align-items-center"> 
+                            <img class="grid-projekat-picture-hover-icon" src="images/google-icon.svg"> 
+                            <img style="padding-bottom: 4px;" class="grid-projekat-picture-hover-icon" src="images/facebook-icon.svg"> 
+                            <img class="grid-projekat-picture-hover-icon" src="images/instagram-icon.svg"> 
+                        </div>
+                    </div>
+                </div>
                 <div class="grid-projekat-opis">
                     <div class="grid-projekat-opis-title">{{item.Title}} </div>
                     <div class="grid-projekat-opis-text">{{item.Text}}</div>
@@ -42,6 +55,95 @@
         </div>
     </div>
     <div class="d-flex justify-content-center home-blok4">
-        <button style="margin: 0;" class="button-blue">VIŠE</button>
+        <button style="margin: 0;" class="button-blue2">VIŠE</button>
+    </div>
+    <div class="home-blok5 d-flex flex-column align-items-center">
+        <div class="home-blok5-naslov">Testimonial</div>
+        <div class="home-blok5-text">Naši verni prijatelji</div>
+        <div class="home-blok3-naslov-linija"></div>
+        <div class="owl-carousel owl-theme">
+        {% for item in PRIJATELJI %}
+        <div class="home-blok5-slajder">
+            <div class="home-blok5-slajder-logo"><img src="img/{{item.Logo}}"></div>
+            <div class="home-blok5-slajder-naziv">{{item.Naziv}}</div>
+            <div class="home-blok5-slajder-title">{{item.Titula}}</div>
+            <div class="home-blok5-slajder-poruka">{{item.Poruka}}</div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="home-blok6">
+        <div class="home-blok6-prvi d-flex">
+        {% for item in Projects %}
+            {% if loop.index < 2 %}
+            <img class="home-blok6-prvi-slika" src="img/{{item.Image}}">
+            {% endif %}
+        {% endfor %}
+            <div class="home-blok6-prvi-text d-flex flex-column justify-content-between">
+                <div class="home-blok6-prvi-text-naslov">Images revealed of David Chipperfield Architects "city palace" apartments in Munich</div>
+                <div class="home-blok6-prvi-text-opis">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                <div class="d-flex">
+                    <button class="button-black"> VIŠE</button>
+                    <button class="button-black"><img style="padding-right: 10px; width: 23px;" src="images/white-plus-icon.svg"> PROSLEDI</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-blok6-drugi d-flex">
+        {% for item in Projects %}
+            {% if loop.index > 1 and loop.index < 6 %}
+            <div class="home-blok6-drugi-pic">
+                <img class="home-blok6-drugi-pic-img"  src="img/{{item.Image}}">
+                <div class="home-blok6-drugi-opis" >
+                    <div class="home-blok6-drugi-opis-text">Images revealed of David Chipperfield Architects "city palace" apartments...</div>
+                    <div class="d-flex">
+                        <button class="button-black"> VIŠE</button>
+                        <button class="button-black"><img style="padding-right: 10px; width: 23px;" src="images/white-plus-icon.svg"> PROSLEDI</button>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="d-flex justify-content-center home-blok4">
+            <button style="margin: 0;" class="button-blue2">VIŠE</button>
+        </div>
+    </div>
+    <div class="home-blok7 d-flex flex-column justify-content-center">
+        <div class="home-blok7-gray d-flex justify-content-between">
+            <div>Naše usluge</div>
+            <div>Naše usluge</div>
+        </div>
+        <div class="home-blok7-black d-flex justify-content-between">
+            <div class="d-flex"><img style="margin-right: 10px; width: 15px;" src="images/black-plus-icon.svg">Google oglašavanje</div>
+            <div class="d-flex">Facebook oglašavanje<img style="margin-left: 10px; width: 15px;" src="images/black-plus-icon.svg"></div>
+        </div>
+    </div>
+    <div class="home-blok8 d-flex flex-column">
+        <div class="d-flex flex-column">
+            <div class="home-blok8-black">Kontakt</div>
+            <div class="home-blok8-gray">Vaša email adresa neće biti objavljena. Obavezna polja su označena *</div>
+        </div>
+        <form>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Ime i prezime *</label>
+                    <input type="text"></input>
+                </div>
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Email *</label>
+                    <input type="text"></input>
+                </div>
+                <div class="d-flex flex-column home-blok8-polje">
+                    <label class="home-blok8-text">Web</label>
+                    <input type="text"></input>
+                </div>
+            </div>
+            <div class="d-flex flex-column home-blok8-polje2">
+                <label class="home-blok8-text">Poruka *</label>
+                <input type="text"></input>
+            </div>
+        </form>
+        <div class="d-flex home-blok8-text"><img style="margin-right: 10px; width: 15px;" src="images/black-plus-icon.svg">Pošalji</div>
     </div>
 {% endblock %}

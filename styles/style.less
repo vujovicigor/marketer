@@ -42,6 +42,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  opacity: 0.7;
 }
 input:active,
 input:focus,
@@ -56,6 +57,12 @@ textarea:focus {
 textarea {
   overflow: auto;
 }
+
+button:focus{
+    outline: none !important;
+}
+
+
 .header{
     height: 80px;
     background-color: @background-gray-dark;
@@ -97,18 +104,76 @@ textarea {
         }
     }
 }
-.button-blue{
+.button{
+    &-blue{
     width: 190px;
     height: 45px;
     background-color: @blue;
     border-color: @blue;
     color: @color-white;
     font-size: 14px;
+    cursor: pointer;
     margin: 4% 0;
-    &:focus{
-        outline: none;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &-blue2{
+        width: 100px;
+        height: 45px;
+        background-color: @blue;
+        border-color: @blue;
+        color: @color-white;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 4% 0;
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    &-white{
+        width: 95px;
+        height: 30px;
+        background-color: @color-white;
+        color: @blue;
+        font-size: 10px;
+        margin-top: 20px;
+        margin-bottom: 90px;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &-black{
+        border: 1px solid @blue;
+        background-color: @background-gray-dark;
+        color: @color-white;
+        font-size: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
     }
 }
+
+
+
 .footer {
   height: 430px;
   background-color: @background-gray-dark;
@@ -134,5 +199,6 @@ textarea {
     }
   }
 }
+
 @import 'variables';
 @import 'home';
