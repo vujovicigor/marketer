@@ -42,7 +42,7 @@
             <input style="border: 0px solid;" id="typeahead_m" type="text" placeholder="Pretraga" class="tt-input">
         </div>
         <div id="head" class="head-responsive--icon">
-            
+
             <div class="head-responsive--meni" id="js-meni">
                 <a href="index"         class="head-responsive--meni-title {%if (_GET['twig_file_name'] | lower)=='index' %} active-m {%endif%}">Početna</a>
                 <a href="o_nama"         class="head-responsive--meni-title {%if (_GET['twig_file_name'] | lower)=='o_nama' %} active-m {%endif%}">O nama</a>
@@ -52,7 +52,7 @@
                 <a href="publikacije"   class="head-responsive--meni-title {%if (_GET['twig_file_name'] | lower)=='publikacije' %} active-m {%endif%}">Publikacije</a>
                 <a href="clanovi"       class="head-responsive--meni-title {%if (_GET['twig_file_name'] | lower)=='clanovi' %} active-m {%endif%}">Članovi</a>
                 <a href="kontakt"       class="head-responsive--meni-title {%if (_GET['twig_file_name'] | lower)=='kontakt' %} active-m {%endif%}">Kontakt</a>
-                
+
             </div>
         </div>
     </div> #}
@@ -84,7 +84,53 @@
     </div>
 
 {% block content %}{% endblock %}
-
+    <footer class="footer black">
+      <div class="container-fluid flex-column wrapper">
+        <div class="d-flex logo">
+          <img src="images/logo.svg"/>
+          {# <p>Marketer</p> #}
+        </div>
+        <div class="d-flex no-gutters info">
+          <div class="col-6 d-flex justify-content-around info--contact">
+            <div class="flex-column w-50">
+              <div class="mb-5">
+                <p>Damjan Tasic</p>
+                <p><a href="mailto:hello@marketer-digitalagency.com">hello@marketer-digitalagency.com</a></p>
+              </div>
+              <div class="mb-5">
+                <p>Socijalne mreže</p>
+                <p>Google + Facebook</p>
+              </div>
+            </div>
+            <div class="flex-column w-50">
+              <div class="mb-5">
+                <p>DALLAS OFFICE</p>
+                <p>2001 Bryan St #3900</p>
+              </div>
+              <div class="mb-5">
+                <p>Dallas TX. 75201</p>
+                <p>(469) 310-5870</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-end info--menu">
+            <div class="flex-column ml-4 mr-4 info--menu-left">
+              <div class="mb-2">O NAMA</div>
+              <div class="mb-2">PORTFOLIO</div>
+              <div class="mb-2">BLOG</div>
+              <div class="mb-2">MARKETER TV</div>
+              <div class="mb-2">DIGITALNI REČNIK</div>
+            </div>
+            <div class="flex-column ml-4 mr-4 info--menu-right">
+              <div class="mb-2">USLUGE</div>
+              <div class="mb-2">GOOLGE OGLAŠAVANJE</div>
+              <div class="mb-2">FACEBOOK OGLAŠAVANJE</div>
+              <div class="mb-2">WEB OGLAŠAVANJE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     {# <div class="footer">
         <div class="footer--1">
             <div class="footer--1--suzi">&copy; 2018 SUZI</div>
@@ -95,10 +141,10 @@
         <div class="footer--icons">
             <a href="https://www.linkedin.com/company/suzi-saee/" target="_blank"><img src="images/Linkedin.svg"></a>
             <a href="https://twitter.com/SUZI_SAEE" target="_blank"><img src="images/Twitter.svg"></a>
-        </div> 
+        </div>
     </div>
     <div class="footer-mob">
-        
+
             <div class="footer-mob-text"><a href="sponzori">Donatori SUZI</a></div>
             <div class="footer-mob-text"><a href="prijatelji">Prijatelji SUZI</a></div>
             <div class="footer-mob-text"><a href="clanovi">Postanite član SUZI</a></div>
@@ -124,7 +170,7 @@
             meni.classList.add('active-meni');
             pretraga.classList.remove('active-pretraga');
             head.classList.add('head-transition');
-        }   
+        }
     });
     search.addEventListener('click', function(){
         if (pretraga.classList.contains('active-pretraga')) {
@@ -139,8 +185,8 @@
 
 </script>
 
-   <script src="js/jquery-3.3.1.min.js"></script> 
-   <script src="js/typeahead.bundle.min.js"></script> 
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/typeahead.bundle.min.js"></script>
    <script>
         var serachArray = [];
         var substringMatcher = function() {
@@ -163,7 +209,7 @@
             if (searchInit) return;
             searchInit=true;
             $.getJSON("cms/api.php/?query=_search", function(result){
-                serachArray = result        
+                serachArray = result
             });
         }
 
@@ -172,12 +218,12 @@
             display: 'Naslov',
             source: substringMatcher(),
             limit: 10
-        }); 
+        });
 
         $('#typeahead_m')[0].focus();
         $('#typeahead_m').bind('typeahead:select', function(ev, suggestion) {
             document.location = suggestion.href+'/'+suggestion.Slug
-        });   
+        });
 
 
 
